@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyther-labsman-tools"
+version = "0.1.0"
+description = "Workspace file search and safe archive extraction CLI"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+desktop = ["jupyterlab>=4"]
+
+[project.scripts]
+find-and-extract = "find_and_extract:main"
+
+[project.gui-scripts]
+jupyter-lab-manager = "jupyter_lab_manager:main"
+
+[tool.setuptools]
+py-modules = ["find_and_extract", "jupyter_lab_manager"]
